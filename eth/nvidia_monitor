@@ -6,12 +6,4 @@ echo 'clocks.current.memory -- current frequency of memory clock.'
 echo 'clocks.current.graphics -- current frequency of graphics (shader) clock.'
 
 nvidia-smi --format=csv\
-		 --query-gpu=fan.speed,\
-		 temperature.gpu,\
-		 clocks.current.video,\
-		 clocks.current.sm,\
-		 clocks.current.memory,\
-		 clocks.current.graphics,\
-		 clocks.max.sm,\
-		 clocks.max.memory,\
-		 clocks.max.graphics
+		 --query-gpu=fan.speed,temperature.gpu,clocks.current.video,clocks.current.sm,clocks.current.memory,clocks.current.graphics,clocks.max.sm,clocks.max.memory,clocks.max.graphics
