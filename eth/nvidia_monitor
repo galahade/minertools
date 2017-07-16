@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo 'clocks.current.video -- current frequency of video encoder/decoder clock.\n'
-echo 'clocks.current.sm -- current frequency of SM (Streaming Multiprocessor) clock.\n'
-echo 'clocks.current.memory -- current frequency of memory clock.\n'
-echo 'clocks.current.graphics -- current frequency of graphics (shader) clock.\n'
+echo 'clocks.current.video -- current frequency of video encoder/decoder clock.'
+echo 'clocks.current.sm -- current frequency of SM (Streaming Multiprocessor) clock.'
+echo 'clocks.current.memory -- current frequency of memory clock.'
+echo 'clocks.current.graphics -- current frequency of graphics (shader) clock.'
 
 nvidia-smi --format=csv\
 		 --query-gpu=fan.speed,\
@@ -14,4 +14,4 @@ nvidia-smi --format=csv\
 		 clocks.current.graphics,\
 		 clocks.max.sm,\
 		 clocks.max.memory,\
-		 clocks.max.graphics,\
+		 clocks.max.graphics
