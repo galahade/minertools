@@ -36,6 +36,7 @@ nvidia-settings -a '[gpu:5]/GPUFanControlState=1'
 nvidia-settings -a '[fan:5]/GPUTargetFanSpeed=75'
 
 ethminer --farm-recheck 200 -U \
+		-v 9 \
 		-S eth-asia1.nanopool.org:9999 \
 		-FS eth-us-west1.nanopool.org:9999 \
 		-O 0xC71c4d0675Bf6D12C8A08d449d4966562eb3e88A.gpuminer2/galahade@sina.com
