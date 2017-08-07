@@ -3,6 +3,8 @@ Description=Run nano ethminer command
 After=graphical.target accounts-daemon.service
 Requires=graphical.target accounts-daemon.service
 [Service]
+Environment=DISPLAY=:0
+WorkingDirectory=/home/miner/
 ExecStart=/usr/local/bin/nano_ethminer
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStop=/bin/kill -15 $MAINPID
