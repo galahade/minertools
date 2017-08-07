@@ -1,11 +1,9 @@
 [Unit]
 Description=Run nano ethminer command
-After=graphical.target
-Requires=graphical.target
+After=graphical.target accounts-daemon.service
+Requires=graphical.target accounts-daemon.service
 [Service]
 ExecStart=/usr/local/bin/nano_ethminer
-ExecStartPre=/bin/echo 'Begin to start ethminer command.'
-ExecStartPost=/bin/echo 'Finish to start ethminer command.'
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStop=/bin/kill -15 $MAINPID
 Type=idle
